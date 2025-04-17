@@ -1,14 +1,22 @@
+:root {
+    --outline: #00fff2;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* outline: 2px red solid; */
     overflow: hidden;
     color: white;
+    font-family: "VT323";
 }
 
 html {
     background-color: black;
+}
+
+img {
+    cursor: pointer;
 }
 
 body {
@@ -26,9 +34,62 @@ body {
     margin: 40px;
 }
 
-/* h2 {
-    margin-top: 20px;
-} */
+header {
+    font-family: "Press Start 2P";
+    font-size: 30px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+header:hover {
+    color: var(--outline);
+}
+
+h2 {
+    margin-left: 30px;
+    font-family: "Press Start 2P";
+    font-weight: 50;
+}
+
+h3 {
+    font-weight: 100;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 20px;
+}
+
+/* Outline */
+.customizer, #alien {
+    border: 5px solid var(--outline);
+}
+
+.sections, .shapes, .other-shapes {
+    border-bottom: 5px solid var(--outline);
+}
+
+input[type="color"] {
+    border-radius: 5px; 
+}
+
+/* Background */
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background img {
+    margin: 20px;
+    outline: 3px solid white;
+    cursor: pointer;
+}
+
+.background img:hover {
+    outline: 3px solid var(--outline);
+}
 
 /* Customizer */
 .customizer {
@@ -37,10 +98,16 @@ body {
 }
 
     /* Body */
+    .shapes, .other-shapes {
+        padding-bottom: 20px;
+    }
+    .properties, .pattern {
+        margin-top: 20px;
+    }
+
     .property-section {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
     }
 
         /* Sections */
@@ -55,7 +122,7 @@ body {
         }
         
         /* Body Shape */
-        .shapes-container {
+        .shapes-container, .other-shapes-container {
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -68,6 +135,10 @@ body {
             justify-content: space-around;
             align-items: center;
             margin: 10px;
+        }
+
+        .body-slider, .plant-count-slider {
+            accent-color: var(--outline);
         }
 
         /* Pattern */
@@ -83,10 +154,16 @@ body {
         }
 
         .pattern-container {
+            margin-left: 30px;
+            margin-top: 20px;
             display: grid;
             justify-content: center;
             align-items: center;
             grid-template-columns: repeat(3, 1fr);
+        }
+
+        .pattern-colors div {
+            margin: 15px;
         }
 
         .pattern-detail {
@@ -98,28 +175,37 @@ body {
             height: 100%;
         }
     
-    /* Other Body Parts*/
     .other-properties {
         display: flex;
-        flex-direction: row;
-    }
-
-    .other-shapes-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-    }
-
-    .other-shapes-container img {
-        margin: 5px;
-        width: 100%;
-        height: auto;
+        flex-direction: column;
     }
 
 /* Other */
 .other {
     height: 40%;
     margin-top: 40px;
+}
+
+.other-values {
+    margin-left: 30px;
+}
+
+.other-values h2 {
+    margin-left: 0;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.other-slider-container {
+    margin-top: 5px;
+}
+
+.other-color div {
+    margin-bottom: 15px;
+}
+
+.other-properties {
+    display: none;
 }
 
 /* 3D Model */

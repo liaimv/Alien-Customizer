@@ -7,68 +7,75 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Audiowide&family=Cherry+Bomb+One&family=DM+Serif+Text:ital@0;1&family=Jersey+20&family=Lexend+Deca:wght@100..900&family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&family=Quintessential&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
   <div class="left-column">
     <div id="alien">
       <canvas id="alien-canvas"></canvas>
     </div>
-    <div class="other"></div>
+    <div class="other">
+      <h2>Background</h2>
+      <div class="background">
+        <img src="assets/backgrounds/space background 1.jpeg" id="background-1">
+        <img src="assets/backgrounds/space background 2.jpeg" id="background-2">
+        <img src="assets/backgrounds/space background 3.jpeg" id="background-3">
+        <img src="assets/backgrounds/space background 4.jpeg" id="background-4">
+      </div>
+    </div>
   </div>
   <div class="customizer">
     <div class="sections">
-      <img class="icons" id="body" src="assets/placeholders/square.png">
-      <img class="icons" id="face1" src="assets/placeholders/square.png">
-      <img class="icons" id="face2" src="assets/placeholders/square.png">
-      <img class="icons" id="limbs1" src="assets/placeholders/square.png">
-      <img class="icons" id="limbs2" src="assets/placeholders/square.png">
-      <img class="icons" id="tail" src="assets/placeholders/square.png">
+      <div class="icons" id="body">
+        <header>PLANET</header>
+      </div>
+      <div class="icons" id="plants">
+        <header>PLANTS</header>
+      </div>
     </div>
-    <div class="properties" id="body-section">
-      <div class="property-section">
+    <div class="properties">
+      <div class="property-section" id="body-section">
         <div class="shapes">
           <h2>BODY SHAPE</h2>
           <div class="shapes-container">
-            <img class="shape-1" id="body1" src="assets/placeholders/square.png" style="outline: 5px solid red;">
-            <img class="shape-2" id="body2" src="assets/placeholders/square.png" style="outline: 5px solid red;">
-            <img class="shape-3" id="body3" src="assets/placeholders/square.png" style="outline: 5px solid red;">
-            <img class="shape-4" id="body4" src="assets/placeholders/square.png">
+            <img class="shape-1" id="body1" src="assets/icons/circle.png">
+            <img class="shape-2" id="body2" src="assets/icons/round.png">
+            <img class="shape-3" id="body3" src="assets/icons/square.png">
+            <img class="shape-4" id="body4" src="assets/icons/octagon.png">
           </div>
         </div>
-        <div class="values">
+        <!-- <div class="values">
           <h2>BODY VALUES</h2>
           <div class="slider-container">
             <div class="body-slider">
-              <label for="width">Width</label>
-              <input type="range" id="size" min="0.3" max="1.3" step="0.1" value="1" class="body-width">
+              <label for="width">Size</label>
+              <input type="range" id="size" min="0.3" max="1.3" step="0.1" value="1" class="planet-size">
             </div>
-            <div class="body-slider">
-              <label for="height">Height</label>
-              <input type="range" id="size" min="0.3" max="1.3" step="0.1" value="1" class="body-height">
-            </div>
-        </div>
-      </div>
+        </div> -->
         <div class="pattern">
           <h2>BODY PATTERN</h2>
             <div class="pattern-container">
-            <div class="pattern-shapes">
-              <h3>Pattern Shape</h3>
-              <div class="pattern-size">
+            <div class="pattern-sizing">
+              <h3 style="margin-left: 15px;">Pattern Shape</h3>
+              <div class="pattern-shape">
                 <div class="row">
-                  <img class ="pattern-detail" id="star" src="assets/placeholders/square.png">
-                  <img class ="pattern-detail" id="pattern-shape-2" src="assets/placeholders/square.png">
-                  <img class ="pattern-detail" id="pattern-shape-3" src="assets/placeholders/square.png">
+                  <img class ="pattern-detail" id="none" src="assets/icons/none.png">
+                  <img class ="pattern-detail" id="circle" src="assets/icons/circle.png">
+                  <img class ="pattern-detail" id="triangle" src="assets/icons/triangle.png">
                 </div>
                 <div class="row">
-                  <img class ="pattern-detail" id="pattern-shape-4" src="assets/placeholders/square.png">
-                  <img class ="pattern-detail" id="pattern-shape-5" src="assets/placeholders/square.png">
-                  <img class ="pattern-detail" id="pattern-shape-6" src="assets/placeholders/square.png">
+                  <img class ="pattern-detail" id="horizontal" src="assets/icons/horizontal.png">
+                  <img class ="pattern-detail" id="vertical" src="assets/icons/vertical.png">
+                  <img class ="pattern-detail" id="diamond" src="assets/icons/diamond.png">
                 </div>
                 <div class="row">
-                  <img class ="pattern-detail" id="pattern-shape-7" src="assets/placeholders/square.png">
-                  <img class ="pattern-detail" id="pattern-shape-8" src="assets/placeholders/square.png">
-                  <img class ="pattern-detail" id="pattern-shape-9" src="assets/placeholders/square.png">
+                  <img class ="pattern-detail" id="heart" src="assets/icons/heart.png">
+                  <img class ="pattern-detail" id="arrow" src="assets/icons/arrow.png">
+                  <img class ="pattern-detail" id="star" src="assets/icons/star.png">
                 </div>
               </div>
             </div>
@@ -77,103 +84,66 @@
               <canvas class="pattern-maker-canvas" id="pattern-maker"></canvas>
             </div>
             <div class="pattern-colors">
-              <h3>Pattern Color</h3>
+              <h3>Pattern Properties</h3>
               <div class="color-picker">
-                <label for="color">Background Color:</label>
+                <label for="color">Background Color</label>
                 <input type="color" id="background-color" value="#ff0000">
               </div>
               <div class="color-picker">
-                <label for="color">Pattern Color:</label>
+                <label for="color">Shape Color</label>
                 <input type="color" id="pattern-color" value="#ffffff">
               </div>
               <div class="body-slider">
                 <label for="height">Width</label>
-                <input type="range" id="pattern-width" min="20" max="100" step="1" value="1" class="pattern-width">
+                <input type="range" id="pattern-width" min="10" max="100" step="1" value="50" class="pattern-width">
               </div>
               <div class="body-slider">
                 <label for="height">Height</label>
-                <input type="range" id="pattern-height" min="20" max="100" step="1" value="1" class="pattern-height">
+                <input type="range" id="pattern-height" min="10" max="100" step="1" value="50" class="pattern-height">
               </div>
               <div class="body-slider">
                 <label for="size">Size</label>
-                <input type="range" id="pattern-individual-size" min="-5" max="10" step="0.1" value="1" class="pattern-individual-size">
+                <input type="range" id="pattern-individual-size" min="1" max="20" step="0.1" value="10" class="pattern-individual-size">
               </div>
             </div>
         </div>
       </div>
     </div>
-    <!-- <div class="other-properties" id="other-section">
-      <div class="left">
+    <div class="other-properties" id="other-section">
         <div class="other-shapes">
           <h2>SHAPE</h2>
           <div class="other-shapes-container">
-            <img class="other-shape-1" id="body1" src="assets/placeholders/square.png">
-            <img class="other-shape-2" id="body2" src="assets/placeholders/square.png">
-            <img class="other-shape-3" id="body3" src="assets/placeholders/square.png">
-            <img class="other-shape-4" id="body4" src="assets/placeholders/square.png">
-            <img class="other-shape-5" id="body5" src="assets/placeholders/square.png">
-            <img class="other-shape-6" id="body6" src="assets/placeholders/square.png">
-            <img class="other-shape-7" id="body7" src="assets/placeholders/square.png">
-            <img class="other-shape-8" id="body8" src="assets/placeholders/square.png">
+            <img class="shape" id="plant1" src="assets/icons/bush.png">
+            <img class="shape" id="plant2" src="assets/icons/circle.png">
+            <img class="shape" id="plant3" src="assets/icons/tree.png">
+            <img class="shape" id="plant4" src="assets/icons/round.png">
           </div>
         </div>
         <div class="other-values">
           <h2>VALUES</h2>
           <div class="other-slider-container">
             <div class="other-body-slider">
-              <label for="width">Width</label>
-              <input type="range" id="size" min="0.3" max="1.3" step="0.1" value="1" class="body-width">
+              <label for="plantCount">Plant Count</label>
+              <input type="range" id="size" min="0" max="100" step="1" value="25" class="plant-count-slider">
             </div>
-            <div class="other-body-slider">
+            <!-- <div class="other-body-slider">
               <label for="length">Length</label>
-              <input type="range" id="size" min="0.3" max="1.3" step="0.1" value="1" class="body-height">
-            </div>
+              <input type="range" id="size" min="0.3" max="1.3" step="0.1" value="1" class="plant-size">
+            </div> -->
         </div>
         <div class="other-color">
           <h2>Color</h2>
-            <div class="other-colors">
-              <div class="color-picker">
-                <label for="color">Choose a color:</label>
-                <input type="color" id="arm-color" value="#ff0000">
+              <div id="top-color-picker">
+                <label for="color">Top Color</label>
+                <input type="color" id="top-color" value="#ffffff">
               </div>
-            </div>
-        </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="other-shapes">
-          <h2>SHAPE</h2>
-          <div class="other-shapes-container">
-            <img class="other-shape-1" id="body1" src="assets/placeholders/square.png">
-            <img class="other-shape-2" id="body2" src="assets/placeholders/square.png">
-            <img class="other-shape-3" id="body3" src="assets/placeholders/square.png">
-            <img class="other-shape-4" id="body4" src="assets/placeholders/square.png">
-          </div>
-        </div>
-        <div class="other-values">
-          <h2>VALUES</h2>
-          <div class="other-slider-container">
-            <div class="other-body-slider">
-              <label for="width">Width</label>
-              <input type="range" id="size" min="0.3" max="1.3" step="0.1" value="1" class="body-width">
-            </div>
-            <div class="other-body-slider">
-              <label for="height">Height</label>
-              <input type="range" id="size" min="0.3" max="1.3" step="0.1" value="1" class="body-height">
-            </div>
-          </div>
-        </div>
-        <div class="other-color">
-          <h2>Color</h2>
-            <div class="other-colors">
-              <div class="color-picker">
-                <label for="color">Choose a color:</label>
-                <input type="color" id="leg-color" value="#ff0000">
+              <div id="stem-color-picker">
+                <label for="color">Stem Color</label>
+                <input type="color" id="stem-color" value="#ffffff">
               </div>
-            </div>
         </div>
-      </div>
-    </div> -->
+        </div>
+    </div>
   </div>
 </body>
     <script type="module" src="https://cdn.skypack.dev/three@0.129.0/build/three.module.js"></script>

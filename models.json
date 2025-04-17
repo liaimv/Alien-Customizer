@@ -1,8 +1,32 @@
 {
-    "bodies": {
-      "body1": "assets/models/Alien Body.glb",
-      "body2": "assets/models/Alien Body 2.glb",
-      "body3": "assets/models/Alien Body 3.glb"
-    }
+  "body": {
+    "shapes": {
+      "body1": "assets/models/Alien Body 2.glb",
+      "body2": "assets/models/Alien Body.glb",
+      "body3": "assets/models/Alien Body 3.glb",
+      "body4": "assets/models/Alien Body 4.glb"
+    },
+    "images": {
+      "body1": "assets/icons/circle.png",
+      "body2": "assets/icons/round.png",
+      "body3": "assets/icons/square.png",
+      "body4": "assets/icons/octagon.png"
+    },
+    "initialModel": "assets/models/Alien Body 2.glb"
+  },
+  "plants": {
+    "shapes": {
+      "plant1": "assets/models/Tree 1.glb",
+      "plant2": "assets/models/Tree 2.glb",
+      "plant3": "assets/models/Tree 3.glb",
+      "plant4": "assets/models/Mushroom.glb"
+    },
+    "images": {
+      "plant1": "assets/icons/bush.png",
+      "plant2": "assets/icons/circle.png",
+      "plant3": "assets/icons/tree.png",
+      "plant4": "assets/icons/round.png"
+    },
+    "initialModel": "assets/models/Tree 1.glb"
   }
-  
+}
